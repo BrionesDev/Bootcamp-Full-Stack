@@ -6,10 +6,10 @@ package poo;
  */
 public class Vehicle {
     // Attributes usually privates but methods are usually publics
-    private String color;
-    private int caballos;
-    private String marca;
-    private String modelo;
+    public String color;
+    public int caballos;
+    public String marca;
+    public String modelo;
     
     // Empty constructor. Default values
     public Vehicle() {
@@ -63,7 +63,6 @@ public class Vehicle {
     public String toString() {
         return "color = " + color + ",\ncaballos = " + caballos + ",\nmarca = " + marca + ",\nmodelo = " + modelo;
     }
-    
     
     
 }
