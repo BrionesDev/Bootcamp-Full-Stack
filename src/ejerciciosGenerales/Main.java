@@ -88,5 +88,38 @@ public class Main {
         System.out.println(newAccount.toString());
         
         
+        // EX4 - Ticket and Raffle
+        
+        // Create 3 tickets and set their 3 numbers for each number
+        Ticket t1 = new Ticket("Juan");
+        Ticket t2 = new Ticket("Maria");
+        Ticket t3 = new Ticket("Carla");
+        
+        t1.setPriNum(17);
+        t1.setSegNum(23);
+        t1.setTerNum(45);
+        
+        t2.setPriNum(12);
+        t2.setSegNum(33);
+        t2.setTerNum(49);
+        
+        t3.setPriNum(6);
+        t3.setSegNum(17);
+        t3.setTerNum(35);
+        
+        // Make validation for these 3 tickets
+        t1.validate(17, 23, 45);
+        t2.validate(12, 33, 49);
+        t3.validate(6, 17, 35);
+        
+        //Create a new raffle with 49 balls. (Give negative balls to create a default raffle with 49 ball)
+        Raffle r1 = new Raffle(-1);
+        int firstBall = r1.takeBall();
+        int secondBall = r1.takeBall();
+        int thirdBall = r1.takeBall();
+        
+        System.out.println(t1.getOwnerName() + " had " + t1.countRightGuesses(firstBall, secondBall, thirdBall) + " guesses");
+        System.out.println(t2.getOwnerName() + " had " + t2.countRightGuesses(firstBall, secondBall, thirdBall) + " guesses");
+        System.out.println(t3.getOwnerName() + " had " + t3.countRightGuesses(firstBall, secondBall, thirdBall) + " guesses");
     }
 }

@@ -13,10 +13,10 @@ public class Vehicle {
     
     // Empty constructor. Default values
     public Vehicle() {
-        this.color = "";
-        this.caballos = 0;
-        this.marca = "";
-        this.modelo = "";
+        this.color = "defYellow";
+        this.caballos = 10;
+        this.marca = "defPeugeot";
+        this.modelo = "defPlus";
     }
 
     // Constructor with values set by user

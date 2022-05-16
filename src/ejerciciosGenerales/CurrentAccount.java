@@ -4,7 +4,6 @@ package ejerciciosGenerales;
 import java.util.Currency;
 import java.util.Random;
 import java.util.Scanner;
-import javax.sound.sampled.FloatControl;
 
 /**
  *
@@ -22,7 +21,8 @@ public class CurrentAccount {
         this.name = name;
         this.accountNum = accountNum;
     }
-
+    
+    // Empty constructor
     public CurrentAccount() {}
     
     public CurrentAccount createAccount() {

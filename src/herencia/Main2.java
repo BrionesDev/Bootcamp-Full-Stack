@@ -1,4 +1,4 @@
-package instancesPoo;
+package herencia;
 import poo.Vehicle;
 /**
  *

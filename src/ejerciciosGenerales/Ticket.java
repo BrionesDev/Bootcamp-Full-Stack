@@ -12,14 +12,16 @@ public class Ticket {
     int terNum;
     boolean isValid;
     boolean isExpired;
+    int quantityGuesses;
 
     public Ticket(String ownerName) {
         this.ownerName = ownerName;
-        this.priNum = -1;
-        this.segNum = -1;
-        this.terNum = -1;
-        this.isValid = false;
-        this.isExpired = false;
+        priNum = -1;
+        segNum = -1;
+        terNum = -1;
+        isValid = false;
+        isExpired = false;
+        quantityGuesses = 0;
     }
 
     public String getOwnerName() {
@@ -79,6 +81,7 @@ public class Ticket {
             if ((first != -1 && second != -1 && third != -1)
                     && (first != second && second != third && first != third)) {
                 isValid = true;
+                System.out.println("Ticket of " + getOwnerName() + " is validated :)");
                 return true;
             } else {
                 System.out.println("Some number of your ticket is -1 or they are repeated");
@@ -96,7 +99,6 @@ public class Ticket {
     }
 
     public int countRightGuesses(int first, int second, int third) {
-        int quanityGuesses = 0;
         if (!isValid || isExpired) {
             return 0;
         }
@@ -105,10 +107,10 @@ public class Ticket {
             if (priNum == first || segNum == first || terNum == first
                 || priNum == second || segNum == second || terNum == second
                 || priNum == third || segNum == third || terNum == third) {
-                quanityGuesses++;
+                quantityGuesses++;
             }
         }
-        return quanityGuesses;
+        return quantityGuesses;
     }
 
 }
