@@ -2,6 +2,7 @@ package collections;
 
 import java.text.Normalizer;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  *
@@ -10,11 +11,17 @@ import java.util.Arrays;
 public class Room implements Comparable<Room> {
     private String name;
     private int id;
+    private int num;
 
     public Room() {}
 
     public Room(String name, int id) {
         this.name = name;
+        this.id = id;
+    }
+    
+    public Room(int num, int id) {
+        this.num = num;
         this.id = id;
     }
 
@@ -45,9 +52,30 @@ public class Room implements Comparable<Room> {
         return this.getId() - o.getId(); // sort by num
     }
 
-    
-    
-    
-    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.name);
+        hash = 41 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Room other = (Room) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        return Objects.equals(this.name, other.name);
+    }
     
 }
