@@ -3,7 +3,7 @@ package poo;
 /**
  * @author Elian Briones
  */
-// Abstract class cannot be instanciated. Must give to any java class and inherite from it
+// Abstract class cannot be instanciated.
 public abstract class Person {
 
     protected String name;
@@ -18,6 +18,6 @@ public abstract class Person {
         this.weight = 0;
     }
 
-    public int getAge(){return age;}
+    public int getAge(){return age;};
 
 }
