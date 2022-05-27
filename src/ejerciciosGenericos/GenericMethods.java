@@ -15,7 +15,7 @@ public class GenericMethods {
     
     public static <T> void displayResult2(T t1, T t2, int i) {
         System.out.println("First element: " + t1.toString());
-        System.out.println("Second element: " + t2.toString());
+        System.out.println("Second ele ment: " + t2.toString());
         System.out.println("Non-generic element: " + i);
     }
     
