@@ -40,6 +40,9 @@ public class Manager extends HttpServlet {
             
             out.println("<h2>Method used: " + request.getMethod() + "</h2>");
             
+            out.println("<p>Nombre: " + request.getParameter("nombre") + "</p>");
+            out.println("<p>Apellidos: " + request.getParameter("apellidos") + "</p>");
+            out.println("<p>Edad: " + request.getParameter("edad") + "</p>");
             
             out.println("</body>");
             out.println("</html>");
@@ -74,7 +77,6 @@ public class Manager extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
     /**
      * Returns a short description of the servlet.
      *
